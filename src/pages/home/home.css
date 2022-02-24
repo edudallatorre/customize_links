@@ -7,6 +7,7 @@
 }
 
 .logo {
+  margin-top: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,10 +29,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: slideY 1s;
+}
+
+/* Animation going up the input area */
+@keyframes slideY {
+  from {
+    transform: translateY(70px);
+  }
+  to {
+    transform: translateY(0px);
+  }
 }
 
 .area-input div {
-  width: 40%;
+  width: 50%;
   height: 46px;
   background-color: rgb(255, 255, 255, 0.15);
   display: flex;
@@ -58,7 +70,7 @@
 }
 
 .area-input button {
-  width: 40%;
+  width: 50%;
   height: 46px;
   border-radius: 4px;
   border: 0;
@@ -69,8 +81,12 @@
 }
 
 @media (max-width: 615px) {
+  .logo {
+    margin-top: 20%;
+  }
+
   .logo img {
-    width: 95px;
+    width: 35%;
   }
 
   .logo h1 {
@@ -79,9 +95,5 @@
 
   .logo span {
     font-size: 16px;
-  }
-
-  .area-input {
-    width: 85%;
   }
 }
