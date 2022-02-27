@@ -2,12 +2,24 @@
   position: absolute;
   bottom: 18px;
   background-color: #ffffff;
-  padding: 14px;
+  padding: 10px;
   width: 700px;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
+  animation: fadeInOut 1.5s;
 }
+
+/* Animation Slide */
+@keyframes fadeInOut {
+  100% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 0;
+  }
+}
+
 
 .modal-header {
   display: flex;
@@ -36,3 +48,26 @@
   border-radius: 4px;
   color: #ffffff;
 }
+
+@media (max-width: 735px){
+  .modal-container {
+    width: 90%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
