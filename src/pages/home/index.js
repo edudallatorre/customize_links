@@ -6,6 +6,8 @@ import Menu from '../../components/menu'
 import LinkItem from '../../components/link_item'
 
 import api from '../../services/api'
+import { saveLink } from '../../services/store_links'
+
 
 export default function Home() {
   const [link, setLink] = useState('')
@@ -20,6 +22,9 @@ export default function Home() {
 
       setData(response.data)
       setShowModal(true)
+
+      saveLink('@shortenLink', response.data)
+
       setLink('')
     } catch {
       alert("Oops looks like something went wrong!")
