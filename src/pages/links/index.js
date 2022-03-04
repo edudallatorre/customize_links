@@ -13,12 +13,14 @@ export default function Links() {
   const [data, setData] = useState({})
   const [showModal, setShowModal] = useState(false)
 
+  const [emptyList, setEmptyList] = useState(false)
+
   useEffect(() => {
     async function getLinks() {
       const result = await getLinksSave('@shortenLink')
 
       if (result.length === 0) {
-        console.log("Empty list")
+        setEmptyList(true)
       }
 
       setMyLinks(result)
@@ -37,7 +39,7 @@ export default function Links() {
     const result = await deleteLink(myLinks, id)
 
     if (result.length === 0) {
-      console.log("You don't have links!")
+      setEmptyList(true)
     }
 
     setMyLinks(result)
@@ -52,6 +54,12 @@ export default function Links() {
           </Link>
           <h1>My Links</h1>
         </div>
+
+        { emptyList && (
+          <div className="links-item">
+            <h2 className="empty-text">Your list is empty!</h2>
+          </div>
+        )}
 
         {myLinks.map( Link =>(
                   <div key={Link.id} className='links-item'>

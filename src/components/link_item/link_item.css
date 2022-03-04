@@ -20,7 +20,6 @@
   }
 }
 
-
 .modal-header {
   display: flex;
   align-items: center;
@@ -49,25 +48,8 @@
   color: #ffffff;
 }
 
-@media (max-width: 735px){
+@media (max-width: 735px) {
   .modal-container {
     width: 90%;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
