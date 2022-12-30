@@ -50,7 +50,7 @@ export default function Links() {
 
         <div className='links-header'>
           <Link to="/">
-          <FiArrowLeft size={38} color="#ffffff" />
+          <FiArrowLeft size={38} color="#000000" />
           </Link>
           <h1>My Links</h1>
         </div>
@@ -64,7 +64,7 @@ export default function Links() {
         {myLinks.map( Link =>(
                   <div key={Link.id} className='links-item'>
                   <button className='link' onClick={() => handleOpenLink(Link)}>
-                    <FiLink size={18} color="#ffffff" />
+                    <FiLink size={18} color="#000000" />
                     {Link.long_url}
                   </button>
                   <button className='link-delete' onClick={() => handleDeleteLink(Link.id)}>

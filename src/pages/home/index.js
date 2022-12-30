@@ -8,6 +8,7 @@ import LinkItem from '../../components/link_item'
 import api from '../../services/api'
 import { saveLink } from '../../services/store_links'
 
+import { BsLinkedin, BsInstagram, BsGithub } from 'react-icons/bs'
 
 export default function Home() {
   const [link, setLink] = useState('')
@@ -37,14 +38,13 @@ export default function Home() {
     
         <div className="logo"> 
             <img src="/logo.png" alt="Customize links logo"/>
-            <h1>CustomizeLinks</h1>
+            <h1>ShortLink</h1>
             <span>Paste your link to shorten! 👇</span>
         </div>
 
 
         <div className="area-input">
             <div>
-                <FiLink size={24} color="#ffffff"/>
                 <input
                     placeholder='Paste your link here...'
                     value={link}
@@ -63,6 +63,22 @@ export default function Home() {
             content={data}
           />
         )}
+
+      <footer>
+        <div>
+          <p>FOLLOW MY JOURNEY</p>
+        </div>
+
+        <div class="social">
+          <a className='social' href='https://www.linkedin.com/in/eduardodallatorre/'><BsLinkedin color="#151a1e" size={18}/></a>
+          <a className='social' href='https://github.com/eduardodallatorre'><BsGithub color="#151a1e" size={18}/></a>
+          <a className='social' href='https://instagram.com/dallatorre.dev/'><BsInstagram color="#151a1e" size={18}/></a>
+        </div>
+
+        <div class="journey">
+          <p>© 2022 | Made with ❤️ by <a id="link" href="https://eduardo.dallatorre.dev"> Eduardo Dalla Torre</a></p>
+        </div>
+      </footer>
 
       </div>
       
